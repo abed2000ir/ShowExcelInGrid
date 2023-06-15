@@ -1,0 +1,113 @@
+﻿@page
+@model GeoLocation.Pages.ShowExcelModel
+
+
+<style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: darkolivegreen;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 10px;
+        padding: 2px;
+        width: 20px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover span {
+            padding-right: 3px;
+        }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+</style>
+
+
+@{
+
+
+
+    <table class="table table-hover" quick-grid>
+        <thead>
+            <tr style="width:50px!important">
+                <form method="post">
+                <td >
+                <div style="display:inline-flex">
+                    <input  type="submit" value="<<" class="button" title="First" asp-route-current="@Model.Current" asp-page-handler="FirstData"> 
+              
+                    <input type="submit" value="<" class="button" title="Previous" asp-route-current="@Model.Current" asp-page-handler="PreviousData">
+               
+                    <span name="current" data-current="@Model.Current">@Model.Current</span>
+               
+                    <input type="submit" value=">" class="button" title="Next" asp-route-current="@Model.Current" asp-page-handler="NextData">
+               
+                    <input type="submit" value=">>" class="button" title="End" asp-route-current="@Model.Current" asp-page-handler="EndData">
+                    </div>
+                </td>
+                </form>
+            </tr>
+            <tr>
+                <th class="col-sm-1" quick-sort="State">         State      </th>
+                <th class="col-lg-2" quick-sort="Area">          Area     </th>
+                <th class="col-lg-2" quick-sort="SchoolName">    SchoolName     </th>
+                <th class="col-lg-3" quick-sort="LevelStudy">    LevelStudy    </th>
+                <th class="col-lg-5" quick-sort="Gender ">       Gender      </th>
+                <th class="col-lg-2" quick-sort="SchoolType">    SchoolType     </th>
+                <th class="col-lg-2" quick-sort="Type ">         Type      </th>
+                <th class="col-lg-2" quick-sort="Character ">    Character      </th>
+                <th class="col-lg-2" quick-sort="Phone ">        Phone      </th>
+                <th class="col-lg-2" quick-sort="Postalcode">    Postalcode     </th>
+                <th class="col-lg-2" quick-sort="Address ">      Address      </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.GridData != null && Model.GridData.Count > 0)
+                @foreach (var item in Model.GridData)
+                {
+                    <tr class="">
+                        <td>@item.State 		</td>
+                        <td>@item.Area         </td>
+                        <td>@item.SchoolName   </td>
+                        <td>@item.LevelStudy   </td>
+                        <td>@item.Gender       </td>
+                        <td>@item.SchoolType   </td>
+                        <td>@item.Type         </td>
+                        <td>@item.Character    </td>
+                        <td>@item.Phone        </td>
+                        <td>@item.Postalcode   </td>
+                        <td>@item.Address      </td>
+                    </tr>
+                }
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" class="text-center" quick-paging></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+}

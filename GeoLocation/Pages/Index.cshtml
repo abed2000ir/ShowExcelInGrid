@@ -1,0 +1,90 @@
+﻿@page "{handler?}/{request?}"
+@using GeoLocation.Models;
+
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<script type="text/javascript">
+    function cbOnChanged(e) {
+        if (e != undefined && e != null) {
+            $('#btnProcessForAll').attr('formaction', "ProcessExcel/" + $(e).attr('asp-route-request'));
+            $('#btnDeleteFileForAll').attr('formaction', "DeleteFile/" + $(e).attr('asp-route-request'));
+
+            $(':checkbox').each(function () {
+                if (this.id != $(e)[0].id)
+                this.checked = false;
+            });
+
+            //for (var chk in $('input:checkbox')) {
+            //    if ($('input:checkbox')[chk].id != $(e)[0].id) {
+            //        $('input:checkbox')[chk].checked = false;
+            //    }
+            //}
+        }
+    }
+</script>
+<body>
+    @{
+        <table class="table table-hover" quick-grid>
+            <thead>
+                <form method="post">
+                <tr>
+                    <th class="col-lg-8" quick-sort="Actions">
+                        <input type="submit" asp-route-request=""  value="Process" id="btnProcessForAll" />
+                    </th>
+                    <th class="col-lg-8" quick-sort="Actions">
+                        <input type="submit" asp-route-request=""  value="Delete" id="btnDeleteFileForAll" />
+                    </th>
+                </tr>
+                </form>
+                <tr>
+                    <th class="col-sm-1" quick-sort="Select">Select</th>
+                    <th class="col-lg-2" quick-sort="Id">Row</th>
+                    <th class="col-lg-2" quick-sort="Name">Name</th>
+                    <th class="col-lg-3" quick-sort="Description ">Description </th>
+                    <th class="col-lg-5" quick-sort="Url">Path</th>
+                    <th class="col-lg-2" quick-sort="Extension">Extension</th>
+                    <th class="col-lg-2" quick-sort="Size">Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ListOfFiles != null && Model.ListOfFiles.Count > 0)
+                    @foreach (var item in Model.ListOfFiles)
+                    {
+                        <tr class="@(item.Id%2==0?"border-info":"border-end")">
+                            <td class="col-sm-2"><input type="checkbox" onchange="cbOnChanged(this)"  asp-route-request="@item.Name" name="chk_@item.Id" id="chk_@item.Id" /></td>
+                            <td class="">@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Url</td>
+                            <td>@item.Extension</td>
+                            <td>@item.Size</td>
+                        </tr>
+                    }
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" class="text-center" quick-paging></td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+
+    <form method="post" enctype="multipart/form-data">
+
+        <span>Select File:</span>
+
+        <input type="file" name="postedFiles" multiple />
+
+        <input type="submit" value="Upload" asp-page-handler="Upload" />
+
+        <br />
+
+        @* <span>@Html.Raw(Model.Message)</span>*@
+
+    </form>
+
+</body>

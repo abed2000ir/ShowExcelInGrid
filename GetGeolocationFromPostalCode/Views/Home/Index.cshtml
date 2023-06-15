@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@{
+
+    ViewData["Title"] = "Home Page";
+
+}
+
+<body>
+
+    <form method="post" enctype="multipart/form-data">
+        <span>Select File:</span>
+        <input type="file" name="postedFile" multiple />
+        <input type="submit" value="Upload" asp-page-handler="Upload" />
+        <br />
+        <span>@Html.Raw(ViewBag.Message)</span>
+    </form>
+
+</body>
+<form>
+
+    <input type="submit" id="test" formaction="~/Home/GetListOFGeolocation" formmethod="get"   formenctype="multipart/form-data" />
+</form>
+
