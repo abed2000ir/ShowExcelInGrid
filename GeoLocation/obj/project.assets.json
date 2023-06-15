@@ -6361,11 +6361,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Samples Project\\PostalCodeGeolocation\\GeoLocation\\GeoLocation.csproj",
+      "projectUniqueName": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\GeoLocation.csproj",
       "projectName": "GeoLocation",
-      "projectPath": "C:\\Samples Project\\PostalCodeGeolocation\\GeoLocation\\GeoLocation.csproj",
+      "projectPath": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\GeoLocation.csproj",
       "packagesPath": "C:\\Users\\a_rajabian\\.nuget\\packages\\",
-      "outputPath": "C:\\Samples Project\\PostalCodeGeolocation\\GeoLocation\\obj\\",
+      "outputPath": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -24,21 +24,12 @@ namespace GeoLocation.Pages
         {
             try
             {
-                //string path = Path.Combine(this.Environment.WebRootPath, "Upload");
-
-                //using (var package = new ExcelPackage(new FileInfo(Path.Combine(path, request))))
-                //{
-                //    ExcelWorksheet sheet = package.Workbook.Worksheets[0];
-                //     var ThatList = sheet.ConvertSheetToObjects<ExcelData>().ToList();
-                //}
-                //OnGet();
                return RedirectToPage("./ShowExcel","ProcessExcel",new { request = request });
-               
-
             }
             catch (Exception ex)
             {
-                throw ex;
+                return RedirectToPage("./Error", "ShowError", new { message = ex.Message });
+
             }
         }
         public IActionResult OnPostDeleteFile([System.Web.Http.FromUri] string request)
@@ -56,7 +47,8 @@ namespace GeoLocation.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                return RedirectToPage("./Error", "ShowError", new { message = ex.Message });
+
             }
         }
 
@@ -91,7 +83,8 @@ namespace GeoLocation.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                return RedirectToPage("./Error", "ShowError", new { message = ex.Message });
+
             }
         }
 
@@ -132,7 +125,8 @@ namespace GeoLocation.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                 RedirectToPage("./Error", "ShowError", new { message = ex.Message });
+
             }
         }
     }

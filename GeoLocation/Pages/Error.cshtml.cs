@@ -14,6 +14,8 @@ namespace GeoLocation.Pages
 
         private readonly ILogger<ErrorModel> _logger;
 
+        public string ErrorMessage { get; set; }
+
         public ErrorModel(ILogger<ErrorModel> logger)
         {
             _logger = logger;
@@ -22,6 +24,14 @@ namespace GeoLocation.Pages
         public void OnGet()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+        }
+
+        public void OnGetShowError(string message)
+        {
+            ErrorMessage = message;
+
+            RedirectToPage();
+
         }
     }
 }

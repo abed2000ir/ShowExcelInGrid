@@ -94,7 +94,8 @@ namespace GeoLocation.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                return RedirectToPage("./Error", "ShowError", new { message = ex.Message });
+
             }
         }
     }

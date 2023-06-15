@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Samples Project\\PostalCodeGeolocation\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj": {}
+    "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj": {}
   },
   "projects": {
-    "C:\\Samples Project\\PostalCodeGeolocation\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj": {
+    "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Samples Project\\PostalCodeGeolocation\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj",
+        "projectUniqueName": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj",
         "projectName": "GetGeolocationFromPostalCode",
-        "projectPath": "C:\\Samples Project\\PostalCodeGeolocation\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj",
+        "projectPath": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GetGeolocationFromPostalCode\\GetGeolocationFromPostalCode.csproj",
         "packagesPath": "C:\\Users\\a_rajabian\\.nuget\\packages\\",
-        "outputPath": "C:\\Samples Project\\PostalCodeGeolocation\\GetGeolocationFromPostalCode\\obj\\",
+        "outputPath": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GetGeolocationFromPostalCode\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
