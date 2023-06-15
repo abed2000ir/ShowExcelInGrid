@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xYOpkRzX0CtwkXGYLZUDhQ7Gif0irEhz9oSDTz67Mxg=",
+  "Hash": "ZDMXYJ7zkiNCfRF9peqiuwmPDUyrFVAviFdDGsnLYZc=",
   "Source": "GeoLocation",
   "BasePath": "_content/GeoLocation",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\sort-down-alt.svg",
+      "SourceId": "GeoLocation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
+      "BasePath": "_content/GeoLocation",
+      "RelativePath": "css/sort-down-alt.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\sort-down-alt.svg"
+    },
+    {
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\sort-up.svg",
+      "SourceId": "GeoLocation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
+      "BasePath": "_content/GeoLocation",
+      "RelativePath": "css/sort-up.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\sort-up.svg"
     },
     {
       "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\favicon.ico",
@@ -1069,23 +1103,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.csv",
-      "SourceId": "GeoLocation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
-      "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/PostalCode_result.csv",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\PostalCode_result.csv"
     },
     {
       "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",

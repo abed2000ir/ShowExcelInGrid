@@ -25,6 +25,80 @@
         }
     }
 </script>
+<style>
+    .border333 {
+        border-radius: 3px;
+        background-color: #f44336;
+        color: white;
+    }
+
+    .border3 {
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+        border: 2px solid #f44336;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        border: none;
+        color: #FFFFFF;
+        padding: 10px 25px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin: 16px 0 !important;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius:15px;
+    }
+
+    .btnDelete {
+        background-color: #f44110;
+        border: none;
+        color: #FFFFFF;
+        padding: 10px 25px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin: 16px 0 !important;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    .btnChoose {
+        background-color: khaki ;
+        border: none;
+        color: black;
+        padding: 10px 25px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin: 16px 0 !important;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    .Process .Delete {
+        transition-duration: 0.4s;
+    }
+
+    .btn:hover {
+        background-color: #4CAF10; /* Green */
+        color: white;
+    }
+
+    .btnDelete:hover {
+        background-color: #f44336; 
+        color: white;
+    }
+</style>
+
 <body>
     @{
         <table class="table table-hover" quick-grid>
@@ -32,10 +106,10 @@
                 <form method="post">
                 <tr>
                     <th class="col-lg-8" quick-sort="Actions">
-                        <input type="submit" asp-route-request=""  value="Process" id="btnProcessForAll" />
+                        <input type="submit" asp-route-request="" class="btn border3 border333 " title="This Button Works For Excel Files" value="Process" id="btnProcessForAll" />
                     </th>
                     <th class="col-lg-8" quick-sort="Actions">
-                        <input type="submit" asp-route-request=""  value="Delete" id="btnDeleteFileForAll" />
+                        <input type="submit" asp-route-request="" class="btnDelete border3 border333 " value="Delete" id="btnDeleteFileForAll" />
                     </th>
                 </tr>
                 </form>
@@ -77,9 +151,9 @@
 
         <span>Select File:</span>
 
-        <input type="file" name="postedFiles" multiple />
+        <input type="file" class="btnChoose border3 border333 " name="postedFiles" multiple />
 
-        <input type="submit" value="Upload" asp-page-handler="Upload" />
+        <input type="submit" value="Upload" class="btn border3 border333" asp-page-handler="Upload" />
 
         <br />
 

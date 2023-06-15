@@ -54,7 +54,7 @@ namespace GeoLocation.Pages
             RedirectToPage();
 
         }
-        public void OnPostFirstData(string current)
+        public void OnGetFirstData()
         {
           
                 Current = 20;
@@ -74,12 +74,33 @@ namespace GeoLocation.Pages
             RedirectToPage();
 
         }
+
+        public void OnPostSortData(string sort,string data)
+        {
+
+            int localcurrent = int.Parse(data);
+
+            GridData = LsExcelData.Skip((localcurrent - 20>20? localcurrent - 20:0)).Take(20).ToList();
+
+            Current = localcurrent;
+            if (sort=="asc")
+            GridData= GridData.ToList().OrderBy(c => c.Postalcode).ToList();
+            else
+            GridData = GridData.ToList().OrderByDescending(c => c.Postalcode).ToList();
+
+         //return   RedirectToPage();
+
+        }
         public IActionResult OnGetProcessExcel([System.Web.Http.FromUri] string request)
         {
             try
             {
+
+
                 string path = Path.Combine(this.Environment.WebRootPath, "Upload");
 
+                if(new FileInfo(Path.Combine(path, request)).Extension==".xlsx")
+                {
                 using (var package = new ExcelPackage(new FileInfo(Path.Combine(path, request))))
                 {
                     ExcelWorksheet sheet = package.Workbook.Worksheets[0];
@@ -88,7 +109,13 @@ namespace GeoLocation.Pages
                 Current = 20;
                 GridData = LsExcelData.Take(20).ToList();
                 //RedirectToPage("ShowExcel");
-                return null;// RedirectToPage("./ShowExcel");
+                return RedirectToPage("./ShowExcel", "FirstData");// RedirectToPage("./ShowExcel");
+                }
+                else
+                {
+                    return RedirectToPage("./Error", "ShowError", new { message = "File Format is not Excel." });
+
+                }
 
 
             }

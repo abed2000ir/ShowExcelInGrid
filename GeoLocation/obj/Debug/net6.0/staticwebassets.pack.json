@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\GeoLocation.bundle.scp.css"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.csv",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode_result.csv"
-    },
-    {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",
       "PackagePath": "staticwebassets\\Upload\\PostalCode_result.txt"
     },
@@ -23,6 +19,14 @@
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\sort-down-alt.svg",
+      "PackagePath": "staticwebassets\\css\\sort-down-alt.svg"
+    },
+    {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\sort-up.svg",
+      "PackagePath": "staticwebassets\\css\\sort-up.svg"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\favicon.ico",
