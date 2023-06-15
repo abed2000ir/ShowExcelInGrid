@@ -77,18 +77,23 @@ namespace GeoLocation.Pages
 
         public void OnPostSortData(string sort,string data)
         {
+            try
+            {
+                int localcurrent = int.Parse(data);
 
-            int localcurrent = int.Parse(data);
+                GridData = LsExcelData.Skip((localcurrent - 20 > 20 ? localcurrent - 20 : 0)).Take(20).ToList();
 
-            GridData = LsExcelData.Skip((localcurrent - 20>20? localcurrent - 20:0)).Take(20).ToList();
+                Current = localcurrent;
+                if (sort == "asc")
+                    GridData = GridData.ToList().OrderBy(c => c.Postalcode).ToList();
+                else
+                    GridData = GridData.ToList().OrderByDescending(c => c.Postalcode).ToList();
+            }
+            catch (Exception ex)
+            {
+                 RedirectToPage("./Error", "ShowError", new { message = ex.Message });
 
-            Current = localcurrent;
-            if (sort=="asc")
-            GridData= GridData.ToList().OrderBy(c => c.Postalcode).ToList();
-            else
-            GridData = GridData.ToList().OrderByDescending(c => c.Postalcode).ToList();
-
-         //return   RedirectToPage();
+            }
 
         }
         public IActionResult OnGetProcessExcel([System.Web.Http.FromUri] string request)
