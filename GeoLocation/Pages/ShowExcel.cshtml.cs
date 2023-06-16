@@ -17,10 +17,7 @@ namespace GeoLocation.Pages
         public ShowExcelModel(IWebHostEnvironment _enviroment)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
             Environment = _enviroment;
-
-
         }
 
         public void OnGet()
@@ -29,7 +26,6 @@ namespace GeoLocation.Pages
 
         public void OnPostNextData(string current)
         {
-
             int localcurrent = int.Parse(current);
             if (localcurrent < LsExcelData.Count)
             {
@@ -38,7 +34,6 @@ namespace GeoLocation.Pages
 
             }
             RedirectToPage();
-
         }
         public void OnPostEndData(string current)
         {
@@ -56,9 +51,8 @@ namespace GeoLocation.Pages
         }
         public void OnGetFirstData()
         {
-          
-                Current = 20;
-                GridData = LsExcelData.Take(20).ToList();
+            Current = 20;
+            GridData = LsExcelData.Take(20).ToList();
             RedirectToPage();
 
         }
@@ -72,10 +66,9 @@ namespace GeoLocation.Pages
                 GridData = LsExcelData.Skip(localcurrent - 20).Take(20).ToList();
             }
             RedirectToPage();
-
         }
 
-        public void OnPostSortData(string sort,string data)
+        public void OnPostSortData(string sort, string data)
         {
             try
             {
@@ -91,43 +84,34 @@ namespace GeoLocation.Pages
             }
             catch (Exception ex)
             {
-                 RedirectToPage("./Error", "ShowError", new { message = ex.Message });
-
+                RedirectToPage("./Error", "ShowError", new { message = ex.Message });
             }
-
         }
         public IActionResult OnGetProcessExcel([System.Web.Http.FromUri] string request)
         {
             try
             {
-
-
                 string path = Path.Combine(this.Environment.WebRootPath, "Upload");
 
-                if(new FileInfo(Path.Combine(path, request)).Extension==".xlsx")
+                if (new string[] { ".xlsx", ".csv" }.Any(new FileInfo(Path.Combine(path, request)).Extension.Equals))
                 {
-                using (var package = new ExcelPackage(new FileInfo(Path.Combine(path, request))))
-                {
-                    ExcelWorksheet sheet = package.Workbook.Worksheets[0];
-                    LsExcelData = sheet.ConvertSheetToObjects<ExcelData>().ToList();
-                }
-                Current = 20;
-                GridData = LsExcelData.Take(20).ToList();
-                //RedirectToPage("ShowExcel");
-                return RedirectToPage("./ShowExcel", "FirstData");// RedirectToPage("./ShowExcel");
+                    using (var package = new ExcelPackage(new FileInfo(Path.Combine(path, request))))
+                    {
+                        ExcelWorksheet sheet = package.Workbook.Worksheets[0];
+                        LsExcelData = sheet.ConvertSheetToObjects<ExcelData>().ToList();
+                    }
+                    Current = 20;
+                    GridData = LsExcelData.Take(20).ToList();
+                    return RedirectToPage("./ShowExcel", "FirstData");// RedirectToPage("./ShowExcel");
                 }
                 else
                 {
                     return RedirectToPage("./Error", "ShowError", new { message = "File Format is not Excel." });
-
                 }
-
-
             }
             catch (Exception ex)
             {
                 return RedirectToPage("./Error", "ShowError", new { message = ex.Message });
-
             }
         }
     }

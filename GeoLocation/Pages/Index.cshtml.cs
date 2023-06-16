@@ -3,6 +3,9 @@ using OfficeOpenXml;
 using GeoLocation.Models;
 using GeoLocation.Utilities;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
+using System.Text;
+using System.Web;
 
 namespace GeoLocation.Pages
 {
@@ -129,5 +132,39 @@ namespace GeoLocation.Pages
 
             }
         }
+
+
+        public IActionResult OnPostDownloadFile([System.Web.Http.FromUri] string request)
+        {
+
+            string wwwpath = this.Environment.WebRootPath;
+            string contentPath = this.Environment.ContentRootPath;
+            string path = Path.Combine(this.Environment.WebRootPath, "Upload");
+
+            if(new FileInfo(path).Extension==".txt")
+            return File(
+                Environment
+                    .WebRootFileProvider
+                    .GetFileInfo(@"\Upload\" + request)
+                    .CreateReadStream(),
+                "text/txt");
+
+            else if(new FileInfo(path).Extension == ".pdf")
+                return File(
+                Environment
+                    .WebRootFileProvider
+                    .GetFileInfo(@"\Upload\" + request)
+                    .CreateReadStream(),
+                "Adobe/pdf");
+            else
+                return File(
+                Environment
+                    .WebRootFileProvider
+                    .GetFileInfo(@"\Upload\" + request)
+                    .CreateReadStream(),
+                "Excel/xlsx");
+        }
+
+       
     }
 }

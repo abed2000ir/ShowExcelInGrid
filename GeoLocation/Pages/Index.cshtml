@@ -11,6 +11,7 @@
         if (e != undefined && e != null) {
             $('#btnProcessForAll').attr('formaction', "ProcessExcel/" + $(e).attr('asp-route-request'));
             $('#btnDeleteFileForAll').attr('formaction', "DeleteFile/" + $(e).attr('asp-route-request'));
+            $('#btnDownloadFile').attr('formaction', "DownloadFile/" + $(e).attr('asp-route-request'));
 
             $(':checkbox').each(function () {
                 if (this.id != $(e)[0].id)
@@ -106,10 +107,14 @@
                 <form method="post">
                 <tr>
                     <th class="col-lg-8" quick-sort="Actions">
-                        <input type="submit" asp-route-request="" class="btn border3 border333 " title="This Button Works For Excel Files" value="Process" id="btnProcessForAll" />
+                        <input type="submit" asp-route-request="" class="btn border3 border333" title="This Button Works For Excel Files" value="Process" id="btnProcessForAll" />
                     </th>
                     <th class="col-lg-8" quick-sort="Actions">
-                        <input type="submit" asp-route-request="" class="btnDelete border3 border333 " value="Delete" id="btnDeleteFileForAll" />
+                        <input type="submit" asp-route-request="" class="btnDelete border3 border333" value="Delete" id="btnDeleteFileForAll" />
+                    </th>
+
+                    <th class="col-lg-8" quick-sort="Actions">
+                        <input type="submit" asp-route-request="" class="btn border3 border333" value="Download" id="btnDownloadFile" />
                     </th>
                 </tr>
                 </form>
