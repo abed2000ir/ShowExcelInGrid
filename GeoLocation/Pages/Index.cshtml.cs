@@ -140,31 +140,46 @@ namespace GeoLocation.Pages
             string wwwpath = this.Environment.WebRootPath;
             string contentPath = this.Environment.ContentRootPath;
             string path = Path.Combine(this.Environment.WebRootPath, "Upload");
-
-            if(new FileInfo(path).Extension==".txt")
+            string Filepath = Path.Combine(path, request);
+            
             return File(
                 Environment
                     .WebRootFileProvider
                     .GetFileInfo(@"\Upload\" + request)
                     .CreateReadStream(),
-                "text/txt");
-
-            else if(new FileInfo(path).Extension == ".pdf")
-                return File(
-                Environment
-                    .WebRootFileProvider
-                    .GetFileInfo(@"\Upload\" + request)
-                    .CreateReadStream(),
-                "Adobe/pdf");
-            else
-                return File(
-                Environment
-                    .WebRootFileProvider
-                    .GetFileInfo(@"\Upload\" + request)
-                    .CreateReadStream(),
-                "Excel/xlsx");
+                GetContentType(Filepath));
         }
 
-       
+        private string GetContentType(string path)
+        {
+            var types = GetMimeTypes();
+            var ext = Path.GetExtension(path).ToLowerInvariant();
+            if(types.ContainsKey(ext))
+            {
+                return types[ext];
+
+            }
+            else
+                // RedirectToPage("./Error", "ShowError", new { message = "" });
+            return "*/*";
+        }
+
+        private Dictionary<string, string> GetMimeTypes()
+        {
+            return new Dictionary<string, string>
+            {
+                {".txt", "text/txt"},
+                {".pdf", "application/pdf"},
+                {".doc", "application/vnd.ms-word"},
+                {".docx", "application/vnd.ms-word"},
+                {".xls", "application/vnd.ms-excel"},
+                {".xlsx", "application/vnd.openxmlformatsofficedocument.spreadsheetml.sheet"},
+                {".png", "image/png"},
+                {".jpg", "image/jpeg"},
+                {".jpeg", "image/jpeg"},
+                {".gif", "image/gif"},
+                {".csv", "text/csv"}
+            };
+        }
     }
 }
