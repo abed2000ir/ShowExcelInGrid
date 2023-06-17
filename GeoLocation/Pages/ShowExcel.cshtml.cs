@@ -128,7 +128,25 @@ namespace GeoLocation.Pages
             }
         }
 
+        private string GetUniqueFileNameInPath(string path,string filename,string extensions )
+        {
+            if (new FileInfo(Path.Combine(path, filename) + ".log").Exists)
+            {
+                IList<FileInfo> lsFile = new DirectoryInfo(Path.Combine(path)).GetFiles("*"+ extensions + "*.*.log").OrderBy(c => c.Name).ToList();
 
+                if (lsFile.Count > 0)
+                {
+                    filename = lsFile[lsFile.Count - 1].Name.Substring(0, lsFile[lsFile.Count - 1].Name.LastIndexOf(".log"));
+
+                    return filename.Split(extensions).First() + extensions + (int.Parse(filename.Split('.').First().Split(extensions).Last()) + 1) + "." + filename.Split('.').Last();
+                }
+                else
+                    return filename.Split('.').First() + extensions+"1." + filename.Split('.').Last();
+
+            }
+            return filename;
+
+        }
         public async Task<IActionResult> OnPostGetLocations(string filename)
         {
             try
@@ -136,27 +154,12 @@ namespace GeoLocation.Pages
                 string path = Path.Combine(this.Environment.WebRootPath, "Upload");
 
                 LsExcelData = GetExcelContent(Path.Combine(path, filename));
-                // LsExcelData = LsExcelData.OrderBy(c => c.Postalcode).ToList();
-
                 HttpClient client = new HttpClient();
                 client.Timeout = new TimeSpan(0, 5, 0);
                 var code = "";
                 var responseBody = "";
 
-                if (new FileInfo(Path.Combine(path, filename) + ".log").Exists)
-                {
-                    IList<FileInfo> lsFile = new DirectoryInfo(Path.Combine(path)).GetFiles("*_Geo*.*.log").OrderBy(c => c.Name).ToList();
-
-                    if (lsFile.Count > 0)
-                    {
-                        filename = lsFile[lsFile.Count - 1].Name.Substring(0, lsFile[lsFile.Count - 1].Name.LastIndexOf(".log"));//.Replace(".log","");
-
-                        filename = filename.Split("_Geo").First() + "_Geo" + (int.Parse(filename.Split('.').First().Split("_Geo").Last()) + 1) + "." + filename.Split('.').Last();
-                    }
-                    else
-                        filename = filename.Split('.').First() + "_Geo1." + filename.Split('.').Last();
-
-                }
+                filename=GetUniqueFileNameInPath(path, filename, "_Geo");
 
                 foreach (var item in LsExcelData)
                 {
