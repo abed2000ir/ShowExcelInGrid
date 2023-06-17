@@ -70,6 +70,21 @@
         cursor: pointer;
         border-radius: 15px;
     }
+
+    .btnCancelGeoLocation {
+        background-color: navajowhite;
+        border: none;
+        color: #FFFFFF;
+        padding: 10px 25px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin: 16px 0 !important;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
 </style>
 
 
@@ -83,7 +98,7 @@
                 <form method="post">
                 <td>
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="GetLocations" id="btnGeoLocation" value="Get GeoLocation" class="btnGeoLocation border3 border333" />
-                    <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="CancelExcelFileProcessed" id="btnCancelRequestGeoLocation" value="Cancel GeoLocation Process" class="btnGeoLocation border3 border333" />
+                    <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="CancelExcelFileProcessed" id="btnCancelRequestGeoLocation" value="Cancel GeoLocation Process" class="btnCancelGeoLocation border3 border333" />
                  
                 </td>
                 </form>

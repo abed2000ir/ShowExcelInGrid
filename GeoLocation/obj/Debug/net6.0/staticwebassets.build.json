@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4PKuTnDNmq0bbHsnUmda/5ya2aEDpcODN4LBdOVm99g=",
+  "Hash": "KfKYg7DOOGAgI2weQRcjt/jLTqv8uLiyyQjWPJ/NvZc=",
   "Source": "GeoLocation",
   "BasePath": "_content/GeoLocation",
   "Mode": "Default",
@@ -1205,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\schoolsData_Geo4.xlsx.log"
+    },
+    {
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData_Geo5.xlsx.log",
+      "SourceId": "GeoLocation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
+      "BasePath": "_content/GeoLocation",
+      "RelativePath": "Upload/schoolsData_Geo5.xlsx.log",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\schoolsData_Geo5.xlsx.log"
     }
   ]
 }
