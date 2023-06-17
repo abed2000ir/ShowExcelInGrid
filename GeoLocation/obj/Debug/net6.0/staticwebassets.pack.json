@@ -5,22 +5,6 @@
       "PackagePath": "staticwebassets\\GeoLocation.bundle.scp.css"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCodeResult.csv",
-      "PackagePath": "staticwebassets\\Upload\\PostalCodeResult.csv"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode_result.txt"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\Zyxel OLT1404A Manual.pdf",
-      "PackagePath": "staticwebassets\\Upload\\Zyxel OLT1404A Manual.pdf"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\runLanguage.GWAT",
-      "PackagePath": "staticwebassets\\Upload\\runLanguage.GWAT"
-    },
-    {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData.xlsx",
       "PackagePath": "staticwebassets\\Upload\\schoolsData.xlsx"
     },
@@ -37,12 +21,12 @@
       "PackagePath": "staticwebassets\\Upload\\schoolsData_Geo2.xlsx.log"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx",
-      "PackagePath": "staticwebassets\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx"
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData_Geo3.xlsx.log",
+      "PackagePath": "staticwebassets\\Upload\\schoolsData_Geo3.xlsx.log"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx",
-      "PackagePath": "staticwebassets\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx"
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData_Geo4.xlsx.log",
+      "PackagePath": "staticwebassets\\Upload\\schoolsData_Geo4.xlsx.log"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\site.css",

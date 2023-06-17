@@ -83,6 +83,7 @@
                 <form method="post">
                 <td>
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="GetLocations" id="btnGeoLocation" value="Get GeoLocation" class="btnGeoLocation border3 border333" />
+                    <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="CancelExcelFileProcessed" id="btnCancelRequestGeoLocation" value="Cancel GeoLocation Process" class="btnGeoLocation border3 border333" />
                  
                 </td>
                 </form>

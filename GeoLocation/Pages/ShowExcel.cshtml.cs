@@ -4,12 +4,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OfficeOpenXml;
 using System.IO;
+using System.Net.Http;
 
 namespace GeoLocation.Pages
 {
     public class ShowExcelModel : PageModel
     {
         private IWebHostEnvironment Environment;
+        public CancellationToken cancellationToken { get; set; }
+        public static CancellationTokenSource cancellationTokenSource { get; set; }
         public static IList<ExcelData> LsExcelData { get; set; }
         public IList<ExcelData> GridData { get; set; }
 
@@ -19,6 +22,11 @@ namespace GeoLocation.Pages
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             Environment = _enviroment;
+
+            if(cancellationTokenSource==null)
+            {
+                cancellationTokenSource = new CancellationTokenSource();
+            }
 
         }
 
@@ -147,6 +155,12 @@ namespace GeoLocation.Pages
             return filename;
 
         }
+
+        public void OnPostCancelExcelFileProcessed()
+        {
+            cancellationTokenSource.Cancel();
+        }
+
         public async Task<IActionResult> OnPostGetLocations(string filename)
         {
             try
@@ -167,15 +181,20 @@ namespace GeoLocation.Pages
 
                     try
                     {
-                        using HttpResponseMessage response = await client.GetAsync("******" + code);
+                        using HttpResponseMessage response = await client.GetAsync("https://map.shatel.ir/geocodes/" + code, cancellationTokenSource.Token);
                         response.EnsureSuccessStatusCode();
                         responseBody = response.Content.ReadAsStringAsync().Result;
+
+                        
                     }
                     catch
                     {
                         responseBody = "";
                     }
-
+                    if(cancellationTokenSource.Token.IsCancellationRequested)
+                    {
+                        break;
+                    }
 
                     using (System.IO.StreamWriter sw = new StreamWriter(Path.Combine(path, filename) + ".log", true))
                     {

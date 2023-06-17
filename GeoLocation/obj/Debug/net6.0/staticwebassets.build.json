@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zPM+yojdfYCOPFGBwsLHrTQMBSRWs1ssImlzuhG5bIY=",
+  "Hash": "4PKuTnDNmq0bbHsnUmda/5ya2aEDpcODN4LBdOVm99g=",
   "Source": "GeoLocation",
   "BasePath": "_content/GeoLocation",
   "Mode": "Default",
@@ -1105,57 +1105,6 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",
-      "SourceId": "GeoLocation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
-      "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/PostalCode_result.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\PostalCode_result.txt"
-    },
-    {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCodeResult.csv",
-      "SourceId": "GeoLocation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
-      "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/PostalCodeResult.csv",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\PostalCodeResult.csv"
-    },
-    {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\runLanguage.GWAT",
-      "SourceId": "GeoLocation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
-      "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/runLanguage.GWAT",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\runLanguage.GWAT"
-    },
-    {
       "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData.xlsx",
       "SourceId": "GeoLocation",
       "SourceType": "Discovered",
@@ -1224,12 +1173,12 @@
       "OriginalItemSpec": "wwwroot\\Upload\\schoolsData_Geo2.xlsx.log"
     },
     {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\Zyxel OLT1404A Manual.pdf",
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData_Geo3.xlsx.log",
       "SourceId": "GeoLocation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
       "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/Zyxel OLT1404A Manual.pdf",
+      "RelativePath": "Upload/schoolsData_Geo3.xlsx.log",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1238,15 +1187,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\Zyxel OLT1404A Manual.pdf"
+      "OriginalItemSpec": "wwwroot\\Upload\\schoolsData_Geo3.xlsx.log"
     },
     {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx",
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData_Geo4.xlsx.log",
       "SourceId": "GeoLocation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
       "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/تغییرات MobileAppApi - ChangeRequest.docx",
+      "RelativePath": "Upload/schoolsData_Geo4.xlsx.log",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1255,24 +1204,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx"
-    },
-    {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx",
-      "SourceId": "GeoLocation",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
-      "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/مستند مربوط به Hotfix_TrafficPulicPage.docx",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx"
+      "OriginalItemSpec": "wwwroot\\Upload\\schoolsData_Geo4.xlsx.log"
     }
   ]
 }
