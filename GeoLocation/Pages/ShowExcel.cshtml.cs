@@ -181,7 +181,7 @@ namespace GeoLocation.Pages
 
                     try
                     {
-                        using HttpResponseMessage response = await client.GetAsync("https://map.shatel.ir/geocodes/" + code, cancellationTokenSource.Token);
+                        using HttpResponseMessage response = await client.GetAsync("*****" + code, cancellationTokenSource.Token);
                         response.EnsureSuccessStatusCode();
                         responseBody = response.Content.ReadAsStringAsync().Result;
 
