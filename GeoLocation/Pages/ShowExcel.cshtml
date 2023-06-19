@@ -87,11 +87,7 @@
     }
 </style>
 
-
 @{
-
-
-
     <table class="table table-hover" quick-grid>
         <thead>
             <tr style="width:50px!important">
@@ -99,7 +95,7 @@
                 <td>
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="GetLocations" id="btnGeoLocation" value="Get GeoLocation" class="btnGeoLocation border3 border333" />
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="CancelExcelFileProcessed" id="btnCancelRequestGeoLocation" value="Cancel GeoLocation Process" class="btnCancelGeoLocation border3 border333" />
-                 
+
                 </td>
                 </form>
                 <form method="post">
@@ -115,7 +111,7 @@
 
                         <input type="submit" value=">>" class="button" title="End" asp-route-current="@Model.Current" asp-page-handler="EndData">
 
-                            </div>
+                    </div>
                 </td>
                 </form>
             </tr>
@@ -177,6 +173,4 @@
             </tr>
         </tfoot>
     </table>
-
-
 }

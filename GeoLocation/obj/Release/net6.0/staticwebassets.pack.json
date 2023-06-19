@@ -5,16 +5,32 @@
       "PackagePath": "staticwebassets\\GeoLocation.bundle.scp.css"
     },
     {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode.txt",
+      "PackagePath": "staticwebassets\\Upload\\PostalCode.txt"
+    },
+    {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode.txt.log",
+      "PackagePath": "staticwebassets\\Upload\\PostalCode.txt.log"
+    },
+    {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCodeResult.csv",
       "PackagePath": "staticwebassets\\Upload\\PostalCodeResult.csv"
+    },
+    {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.csv",
+      "PackagePath": "staticwebassets\\Upload\\PostalCode_result.csv"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",
       "PackagePath": "staticwebassets\\Upload\\PostalCode_result.txt"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\Zyxel OLT1404A Manual.pdf",
-      "PackagePath": "staticwebassets\\Upload\\Zyxel OLT1404A Manual.pdf"
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\ResumableDownloadtxt.cs",
+      "PackagePath": "staticwebassets\\Upload\\ResumableDownloadtxt.cs"
+    },
+    {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\ResumableDownloadtxt.txt",
+      "PackagePath": "staticwebassets\\Upload\\ResumableDownloadtxt.txt"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\runLanguage.GWAT",
@@ -23,14 +39,6 @@
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData.xlsx",
       "PackagePath": "staticwebassets\\Upload\\schoolsData.xlsx"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx",
-      "PackagePath": "staticwebassets\\Upload\\تغییرات MobileAppApi - ChangeRequest.docx"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx",
-      "PackagePath": "staticwebassets\\Upload\\مستند مربوط به Hotfix_TrafficPulicPage.docx"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\site.css",
