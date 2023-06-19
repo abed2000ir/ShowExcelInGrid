@@ -16,6 +16,8 @@ namespace GeoLocation.Pages
         public static IList<ExcelData> LsExcelData { get; set; }
         public IList<ExcelData> GridData { get; set; }
 
+        public static string FileNameToProcess { get; set; }
+
         public int _current = 0;
         public int Current { get { return _current; } set { _current = value; } }
         public ShowExcelModel(IWebHostEnvironment _enviroment)
@@ -30,12 +32,14 @@ namespace GeoLocation.Pages
 
         }
 
+       
         public void OnGet()
         {
         }
 
         public void OnPostNextData(string current)
         {
+            ViewData["Sended_File"] = FileNameToProcess;
             int localcurrent = int.Parse(current);
             if (localcurrent < LsExcelData.Count)
             {
@@ -47,6 +51,7 @@ namespace GeoLocation.Pages
         }
         public void OnPostEndData(string current)
         {
+            ViewData["Sended_File"] = FileNameToProcess;
 
             Current = 20;
             if (LsExcelData.Count > 20)
@@ -61,8 +66,8 @@ namespace GeoLocation.Pages
         }
         public void OnGetFirstData(string filename)
         {
-            ViewData["Sended_File"] = filename;
-
+            FileNameToProcess = filename;
+            ViewData["Sended_File"] = FileNameToProcess;
             Current = 20;
             GridData = LsExcelData.Take(20).ToList();
             RedirectToPage();
@@ -71,6 +76,7 @@ namespace GeoLocation.Pages
 
         public void OnPostPreviousData(string current)
         {
+            ViewData["Sended_File"] = FileNameToProcess;
             int localcurrent = int.Parse(current);
             if (localcurrent > 20)
             {
@@ -84,6 +90,7 @@ namespace GeoLocation.Pages
         {
             try
             {
+            ViewData["Sended_File"] = FileNameToProcess;
                 int localcurrent = int.Parse(data);
 
                 GridData = LsExcelData.Skip((localcurrent - 20 > 20 ? localcurrent - 20 : 0)).Take(20).ToList();
@@ -165,6 +172,7 @@ namespace GeoLocation.Pages
         {
             try
             {
+            ViewData["Sended_File"] = FileNameToProcess;
                 string path = Path.Combine(this.Environment.WebRootPath, "Upload");
 
                 LsExcelData = GetExcelContent(Path.Combine(path, filename));

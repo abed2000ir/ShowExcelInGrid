@@ -5,40 +5,12 @@
       "PackagePath": "staticwebassets\\GeoLocation.bundle.scp.css"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode.txt",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode.txt"
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsDataLess.xlsx",
+      "PackagePath": "staticwebassets\\Upload\\schoolsDataLess.xlsx"
     },
     {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode.txt.log",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode.txt.log"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCodeResult.csv",
-      "PackagePath": "staticwebassets\\Upload\\PostalCodeResult.csv"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.csv",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode_result.csv"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\PostalCode_result.txt",
-      "PackagePath": "staticwebassets\\Upload\\PostalCode_result.txt"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\ResumableDownloadtxt.cs",
-      "PackagePath": "staticwebassets\\Upload\\ResumableDownloadtxt.cs"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\ResumableDownloadtxt.txt",
-      "PackagePath": "staticwebassets\\Upload\\ResumableDownloadtxt.txt"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\runLanguage.GWAT",
-      "PackagePath": "staticwebassets\\Upload\\runLanguage.GWAT"
-    },
-    {
-      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData.xlsx",
-      "PackagePath": "staticwebassets\\Upload\\schoolsData.xlsx"
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsDataLess.xlsx.log",
+      "PackagePath": "staticwebassets\\Upload\\schoolsDataLess.xlsx.log"
     },
     {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\site.css",

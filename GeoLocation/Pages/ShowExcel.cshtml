@@ -95,10 +95,10 @@
                 <td>
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="GetLocations" id="btnGeoLocation" value="Get GeoLocation" class="btnGeoLocation border3 border333" />
                     <input type="submit" formmethod="post" asp-route-filename="@ViewData["Sended_File"]" asp-page-handler="CancelExcelFileProcessed" id="btnCancelRequestGeoLocation" value="Cancel GeoLocation Process" class="btnCancelGeoLocation border3 border333" />
-
+                    <input type="hidden" id="fileForProcess" name="fileForProcess" asp-data-filename="@ViewData["Sended_File"]" />
                 </td>
-                </form>
-                <form method="post">
+              </form>
+              <form method="post">
                 <td>
                     <div style="display:inline-flex">
                         <input type="submit" value="<<" class="button" title="First" formmethod="get" asp-page-handler="FirstData">
