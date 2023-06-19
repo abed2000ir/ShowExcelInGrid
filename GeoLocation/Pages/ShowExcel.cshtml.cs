@@ -181,7 +181,7 @@ namespace GeoLocation.Pages
 
                     try
                     {
-                        using HttpResponseMessage response = await client.GetAsync("*****" + code, cancellationTokenSource.Token);
+                        using HttpResponseMessage response = await client.GetAsync("https://map.shatel.ir/geocodes/" + code, cancellationTokenSource.Token);
                         response.EnsureSuccessStatusCode();
                         responseBody = response.Content.ReadAsStringAsync().Result;
 
@@ -203,7 +203,7 @@ namespace GeoLocation.Pages
 
                 }
 
-                return RedirectToPage("./ShowExcel", "FirstData");// RedirectToPage("./ShowExcel");
+                return RedirectToPage("./Index", "Index");// RedirectToPage("./ShowExcel");
 
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YImrFkk6DhlIwcRtMtpKhy91eJvYvEutqleBhwVJmno=",
+  "Hash": "chtwcjVHpRKjsnZbV6Q/bchp4rVEQ7Q4VxmmpY0cfmQ=",
   "Source": "GeoLocation",
   "BasePath": "_content/GeoLocation",
   "Mode": "Default",
@@ -1105,12 +1105,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsData.xlsx",
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsDataLess.xlsx",
       "SourceId": "GeoLocation",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
       "BasePath": "_content/GeoLocation",
-      "RelativePath": "Upload/schoolsData.xlsx",
+      "RelativePath": "Upload/schoolsDataLess.xlsx",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1119,7 +1119,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\schoolsData.xlsx"
+      "OriginalItemSpec": "wwwroot\\Upload\\schoolsDataLess.xlsx"
+    },
+    {
+      "Identity": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsDataLess.xlsx.log",
+      "SourceId": "GeoLocation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\",
+      "BasePath": "_content/GeoLocation",
+      "RelativePath": "Upload/schoolsDataLess.xlsx.log",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\schoolsDataLess.xlsx.log"
     }
   ]
 }
