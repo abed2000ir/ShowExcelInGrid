@@ -147,11 +147,11 @@ namespace GeoLocation.Pages
         {
             if (new FileInfo(Path.Combine(path, filename) + ".log").Exists)
             {
-                IList<FileInfo> lsFile = new DirectoryInfo(Path.Combine(path)).GetFiles("*"+ extensions + "*.*.log").OrderBy(c => c.Name).ToList();
+                IList<FileInfo> lsFile = new DirectoryInfo(Path.Combine(path)).GetFiles("*"+ extensions + "*.*.csv").OrderBy(c => c.Name).ToList();
 
                 if (lsFile.Count > 0)
                 {
-                    filename = lsFile[lsFile.Count - 1].Name.Substring(0, lsFile[lsFile.Count - 1].Name.LastIndexOf(".log"));
+                    filename = lsFile[lsFile.Count - 1].Name.Substring(0, lsFile[lsFile.Count - 1].Name.LastIndexOf(".csv"));
 
                     return filename.Split(extensions).First() + extensions + (int.Parse(filename.Split('.').First().Split(extensions).Last()) + 1) + "." + filename.Split('.').Last();
                 }
@@ -204,7 +204,7 @@ namespace GeoLocation.Pages
                         break;
                     }
 
-                    using (System.IO.StreamWriter sw = new StreamWriter(Path.Combine(path, filename) + ".log", true))
+                    using (System.IO.StreamWriter sw = new StreamWriter(Path.Combine(path, filename) + ".csv", true))
                     {
                         sw.WriteLine($"{code},{responseBody}");
                     }

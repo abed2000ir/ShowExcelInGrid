@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Upload\\schoolsDataLess.xlsx.log"
     },
     {
+      "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\Upload\\schoolsDataLess_Geo1.xlsx.log",
+      "PackagePath": "staticwebassets\\Upload\\schoolsDataLess_Geo1.xlsx.log"
+    },
+    {
       "Id": "C:\\GitHub\\abed2000ir\\Repos\\ShowExcelInGrid\\GeoLocation\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
