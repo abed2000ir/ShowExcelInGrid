@@ -182,6 +182,7 @@ namespace GeoLocation.Pages
                 var responseBody = "";
 
                 filename=GetUniqueFileNameInPath(path, filename, "_Geo");
+                int count = 0;
 
                 foreach (var item in LsExcelData)
                 {
@@ -189,11 +190,9 @@ namespace GeoLocation.Pages
 
                     try
                     {
-                        using HttpResponseMessage response = await client.GetAsync("https://map.shatel.ir/geocodes/" + code, cancellationTokenSource.Token);
+                        using HttpResponseMessage response = await client.GetAsync("*****" + code);//, cancellationTokenSource.Token);
                         response.EnsureSuccessStatusCode();
                         responseBody = response.Content.ReadAsStringAsync().Result;
-
-                        
                     }
                     catch
                     {
@@ -203,9 +202,16 @@ namespace GeoLocation.Pages
                     {
                         break;
                     }
-
                     using (System.IO.StreamWriter sw = new StreamWriter(Path.Combine(path, filename) + ".csv", true))
                     {
+                        if(count==0)
+                            sw.WriteLine($"PostalCode,latitude,longitude");
+
+                        count++;
+                        LatLongModel latLongModel =  Newtonsoft.Json.JsonConvert.DeserializeObject<LatLongModel>(responseBody);
+                        if(latLongModel!=null)
+                            sw.WriteLine($"{code},{latLongModel.latitude},{latLongModel.longitude}");
+                        else
                         sw.WriteLine($"{code},{responseBody}");
                     }
 

@@ -51,4 +51,11 @@
         }
     }
 
+    public class LatLongModel
+    {
+        public string latitude { get; set; }
+        public string longitude { get; set; }
+
+    }
+
 }
